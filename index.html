@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dra. Júnia Nascimento — Médica Hematologista em Belo Horizonte. Especialista em diagnóstico e tratamento de doenças do sangue. Agende sua consulta." />
+  <title>Dra. Júnia Nascimento — Hematologista | Belo Horizonte</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SKIP LINK -->
+  <a href="#main" class="skip-link">Ir para o conteúdo principal</a>
+
+  <!-- HEADER -->
+  <header class="header" id="header" role="banner">
+    <div class="container header__inner">
+      <a href="#hero" class="header__logo" aria-label="Início — Dra. Júnia Nascimento">
+        <span class="header__logo-name">Dra. Júnia Nascimento</span>
+        <span class="header__logo-crm">CRM/MG 071495 · RQE 50663 · Hematologista</span>
+      </a>
+
+      <button class="header__menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
+        <span class="header__menu-bar"></span>
+        <span class="header__menu-bar"></span>
+        <span class="header__menu-bar"></span>
+      </button>
+
+      <nav id="nav-menu" class="nav" aria-label="Navegação principal">
+        <ul class="nav__list" role="list">
+          <li><a href="#sobre"          class="nav__link">Sobre</a></li>
+          <li><a href="#especialidades" class="nav__link">Especialidades</a></li>
+          <li><a href="#formacao"       class="nav__link">Formação</a></li>
+          <li><a href="#convenios"      class="nav__link">Convênios</a></li>
+          <li><a href="#contato"        class="nav__link nav__link--cta">Agendar Consulta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section id="hero" class="hero" aria-label="Apresentação profissional">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="hero__eyebrow">Medicina Especializada em Doenças do Sangue</span>
+          <h1 class="hero__name">
+            Dra. Júnia<br />
+            <em>Nascimento</em>
+          </h1>
+          <p class="hero__tagline">
+            Cuidado hematológico baseado em evidências,<br class="hide-sm" />
+            com humanidade e dedicação a cada paciente.
+          </p>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn--primary">Agendar Consulta</a>
+            <a href="#sobre"   class="btn btn--outline">Minha trajetória</a>
+          </div>
+          <ul class="hero__badges" role="list" aria-label="Destaques">
+            <li class="hero__badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+              +10 anos de experiência
+            </li>
+            <li class="hero__badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Belo Horizonte, MG
+            </li>
+            <li class="hero__badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+              Membro da ABHH
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal reveal--right" aria-hidden="true">
+          <div class="hero__photo-frame">
+            <img
+                src="img/perfil.jpg"
+                alt="Dra. Júnia Nascimento, médica hematologista em Belo Horizonte"
+                class="hero__photo-img"
+                width="340"
+                height="453"
+                loading="eager"
+              />
+          </div>
+          <div class="hero__deco hero__deco--1"></div>
+          <div class="hero__deco hero__deco--2"></div>
+        </div>
+      </div>
+
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar para próxima seção">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- ── SOBRE ──────────────────────────────────────────────────── -->
+    <section id="sobre" class="section sobre" aria-labelledby="sobre-title">
+      <div class="container sobre__inner">
+
+        <figure class="sobre__figure reveal">
+          <div class="sobre__photo-frame">
+            <div class="sobre__photo-placeholder" role="img" aria-label="Foto da Dra. Júnia Nascimento">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+              <span>Foto em Consultório</span>
+            </div>
+          </div>
+          <div class="sobre__photo-accent" aria-hidden="true"></div>
+        </figure>
+
+        <div class="sobre__content reveal reveal--right">
+          <span class="section__label">Sobre mim</span>
+          <h2 id="sobre-title" class="section__title">
+            Uma trajetória construída<br />com <em>propósito</em>
+          </h2>
+          <p>
+            Sou médica formada pela Universidade Federal de Minas Gerais (UFMG), com residência em Clínica Médica pela Santa Casa de Misericórdia de Belo Horizonte e especialização em Hematologia e Hemoterapia pelo Hospital Luxemburgo — Instituto Mário Penna. Complemento minha formação clínica com MBA e pós-graduação em gestão em saúde.
+          </p>
+          <p>
+            Atuo como hematologista na Clínica Oncomed BH e no Hospital Madre Teresa, onde também sou Responsável Técnica do Banco de Sangue. Sou preceptora da residência médica em Hematologia e Hemoterapia no Hospital Luxemburgo e integro a equipe de hematologia da FELUMA — Instituto de Oncologia Ciências Médicas.
+          </p>
+          <p>
+            Minha prática abrange Hematologia Geral, Onco-Hematologia e Hemoterapia, sempre aliando evidência científica ao acolhimento humano. Ofereço atendimento presencial e teleconsulta, em português e inglês.
+          </p>
+
+          <ul class="stats" role="list" aria-label="Números da carreira">
+            <li class="stat">
+              <span class="stat__number" data-target="10">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">anos de experiência</span>
+            </li>
+            <li class="stat">
+              <span class="stat__number" data-target="2500">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">pacientes atendidos</span>
+            </li>
+            <li class="stat">
+              <span class="stat__number" data-target="5">0</span>
+              <span class="stat__label">publicações científicas</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── ESPECIALIDADES ─────────────────────────────────────────── -->
+    <section id="especialidades" class="section especialidades" aria-labelledby="esp-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">Área de atuação</span>
+          <h2 id="esp-title" class="section__title">Especialidades &amp; <em>Serviços</em></h2>
+          <p class="section__subtitle">
+            Diagnóstico e acompanhamento completo das principais doenças hematológicas,<br class="hide-sm" />
+            com tecnologia de ponta e atenção personalizada.
+          </p>
+        </header>
+
+        <ul class="cards" role="list">
+
+          <li class="card reveal" style="--i:0">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="card__title">Hematologia Geral</h3>
+            <p class="card__text">Diagnóstico e tratamento de anemias (ferropriva, megaloblástica, hemolítica, aplástica, falciforme), policitemias, plaquetopenias e alterações em hemogramas.</p>
+          </li>
+
+          <li class="card reveal" style="--i:1">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="card__title">Onco-Hematologia</h3>
+            <p class="card__text">Diagnóstico, estadiamento e acompanhamento de leucemias, linfomas, mieloma múltiplo e outras neoplasias hematológicas, em parceria com equipes de oncologia.</p>
+          </li>
+
+          <li class="card reveal" style="--i:2">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="card__title">Coagulopatias</h3>
+            <p class="card__text">Avaliação e manejo de distúrbios da coagulação — trombofilia, hemofilia, plaquetopenia, púrpura trombocitopênica e síndrome antifosfolípide.</p>
+          </li>
+
+          <li class="card reveal" style="--i:3">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="card__title">Hemoterapia &amp; Banco de Sangue</h3>
+            <p class="card__text">Suporte hemoterápico, indicação e acompanhamento de transfusões, avaliação de doadores e compatibilidade transfusional.</p>
+          </li>
+
+          <li class="card reveal" style="--i:4">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="card__title">Teleconsulta</h3>
+            <p class="card__text">Atendimento online em hematologia para consultas de acompanhamento, segunda opinião e orientação de exames — com comodidade e segurança, em português ou inglês.</p>
+          </li>
+
+          <li class="card reveal" style="--i:5">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="card__title">Primeira Consulta Hematológica</h3>
+            <p class="card__text">Avaliação clínica completa, análise de exames laboratoriais, definição diagnóstica e planejamento terapêutico individualizado para cada paciente.</p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── FORMAÇÃO ───────────────────────────────────────────────── -->
+    <section id="formacao" class="section formacao" aria-labelledby="form-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">Trajetória profissional</span>
+          <h2 id="form-title" class="section__title">Formação &amp; <em>Carreira</em></h2>
+        </header>
+
+        <ol class="timeline" aria-label="Linha do tempo da formação profissional">
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__body">
+              <time class="timeline__period">Atual</time>
+              <h3 class="timeline__title">Hematologista — Clínica Oncomed BH</h3>
+              <p class="timeline__org">R. Bernardo Guimarães, 3.106 — Barro Preto, Belo Horizonte</p>
+              <p class="timeline__desc">Atendimento ambulatorial em hematologia geral, onco-hematologia e hemoterapia. Consultas presenciais e teleconsulta.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__body">
+              <time class="timeline__period">Atual</time>
+              <h3 class="timeline__title">Responsável Técnica do Banco de Sangue</h3>
+              <p class="timeline__org">Hospital Madre Teresa — Av. Raja Gabaglia, 1002, Belo Horizonte</p>
+              <p class="timeline__desc">Gestão técnica do banco de sangue e hematologista no corpo clínico do hospital.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__body">
+              <time class="timeline__period">Atual</time>
+              <h3 class="timeline__title">Preceptora da Residência em Hematologia</h3>
+              <p class="timeline__org">Hospital Luxemburgo — Instituto Mário Penna, Belo Horizonte</p>
+              <p class="timeline__desc">Supervisão e formação de médicos residentes em Hematologia e Hemoterapia, aliando prática clínica ao ensino médico.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__body">
+              <time class="timeline__period">Atual</time>
+              <h3 class="timeline__title">Hematologista — FELUMA / IOCM</h3>
+              <p class="timeline__org">Instituto de Oncologia Ciências Médicas — Hospital Universitário Ciências Médicas</p>
+              <p class="timeline__desc">Integrante da equipe de hematologia do instituto de oncologia ligado à FELUMA.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__body">
+              <time class="timeline__period">Pós-graduação</time>
+              <h3 class="timeline__title">MBA em Gestão em Saúde</h3>
+              <p class="timeline__org">Formação complementar em administração</p>
+              <p class="timeline__desc">Visão estratégica de gestão aplicada à saúde, complementando a prática clínica com competências em liderança e organização.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__body">
+              <time class="timeline__period">Residência</time>
+              <h3 class="timeline__title">Hematologia e Hemoterapia</h3>
+              <p class="timeline__org">Hospital Luxemburgo — Instituto Mário Penna, Belo Horizonte</p>
+              <p class="timeline__desc">Especialização em hematologia benigna e maligna, hemoterapia, transfusão de sangue e terapia celular.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__body">
+              <time class="timeline__period">Residência</time>
+              <h3 class="timeline__title">Clínica Médica</h3>
+              <p class="timeline__org">Santa Casa de Misericórdia de Belo Horizonte</p>
+              <p class="timeline__desc">Formação ampla em medicina interna, base fundamental para a atuação como especialista em doenças do sangue.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__body">
+              <time class="timeline__period">Graduação</time>
+              <h3 class="timeline__title">Medicina</h3>
+              <p class="timeline__org">Universidade Federal de Minas Gerais (UFMG) — Belo Horizonte</p>
+              <p class="timeline__desc">Formação médica completa em uma das principais faculdades de medicina do Brasil.</p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── ATENDIMENTO ──────────────────────────────────────────── -->
+    <section id="convenios" class="section convenios" aria-labelledby="conv-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">Formas de atendimento</span>
+          <h2 id="conv-title" class="section__title">Atendimento <em>Particular</em></h2>
+          <p class="section__subtitle">Consultas presenciais na Clínica Oncomed BH e teleconsulta online. Pagamento facilitado via PIX ou dinheiro.</p>
+        </header>
+
+        <ul class="convenios__grid reveal" role="list" aria-label="Formas de atendimento disponíveis">
+          <li class="convenio convenio--highlight">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            Consulta Presencial Particular
+          </li>
+          <li class="convenio convenio--highlight">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Teleconsulta Online
+          </li>
+          <li class="convenio">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Pagamento via PIX
+          </li>
+          <li class="convenio">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Pagamento em Dinheiro
+          </li>
+        </ul>
+
+        <p class="convenios__note reveal">
+          Dúvidas sobre valores ou formas de pagamento?
+          <a href="#contato">Entre em contato</a> pelo WhatsApp.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CONTATO ────────────────────────────────────────────────── -->
+    <section id="contato" class="section contato" aria-labelledby="contato-title">
+      <div class="container contato__inner">
+
+        <!-- Info -->
+        <div class="contato__info reveal">
+          <span class="section__label">Fale conosco</span>
+          <h2 id="contato-title" class="section__title">Agende sua<br /><em>Consulta</em></h2>
+          <p class="contato__desc">
+            Atendimento particular, de segunda a sexta. Entre em contato pelo WhatsApp para agendar sua consulta presencial ou teleconsulta.
+          </p>
+
+          <ul class="contact-list" role="list">
+            <li>
+              <a href="https://wa.me/5531986488180" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem no WhatsApp: (31) 98648-8180">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </span>
+                <div>
+                  <span class="contact-item__label">WhatsApp</span>
+                  <span class="contact-item__value">(31) 98648-8180</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:junianascimentohemato@gmail.com" class="contact-item" aria-label="Enviar e-mail para junianascimentohemato@gmail.com">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <div>
+                  <span class="contact-item__label">E-mail</span>
+                  <span class="contact-item__value">junianascimentohemato@gmail.com</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <div class="contact-item contact-item--static">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div>
+                  <span class="contact-item__label">Endereço</span>
+                  <span class="contact-item__value">Clínica Oncomed BH<br />R. Bernardo Guimarães, 3.106 — Barro Preto<br />Belo Horizonte/MG — CEP 30140-083</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="horario">
+            <h3 class="horario__title">Horário de Atendimento</h3>
+            <dl class="horario__list">
+              <div class="horario__row"><dt>Segunda — Sexta</dt><dd>08h às 18h</dd></div>
+              <div class="horario__row horario__row--off"><dt>Sábado</dt><dd>Fechado</dd></div>
+              <div class="horario__row horario__row--off"><dt>Domingo</dt><dd>Fechado</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contato__form-wrap reveal reveal--right">
+          <form class="form" id="contact-form" novalidate aria-label="Formulário de solicitação de agendamento">
+            <h3 class="form__title">Solicitar Agendamento</h3>
+
+            <div class="form__group">
+              <label for="f-nome" class="form__label">
+                Nome completo
+                <span aria-hidden="true" class="form__required">*</span>
+                <span class="sr-only">(obrigatório)</span>
+              </label>
+              <input type="text" id="f-nome" name="nome" class="form__input" placeholder="Seu nome completo" required autocomplete="name" aria-describedby="err-nome" />
+              <span id="err-nome" class="form__error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="f-tel" class="form__label">
+                Telefone / WhatsApp
+                <span aria-hidden="true" class="form__required">*</span>
+                <span class="sr-only">(obrigatório)</span>
+              </label>
+              <input type="tel" id="f-tel" name="telefone" class="form__input" placeholder="(31) 00000-0000" required autocomplete="tel" aria-describedby="err-tel" />
+              <span id="err-tel" class="form__error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="f-email" class="form__label">E-mail</label>
+              <input type="email" id="f-email" name="email" class="form__input" placeholder="seu@email.com" autocomplete="email" aria-describedby="err-email" />
+              <span id="err-email" class="form__error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form__group">
+              <label for="f-tipo" class="form__label">Tipo de consulta</label>
+              <select id="f-tipo" name="tipo" class="form__input form__select">
+                <option value="">Selecione o tipo de consulta</option>
+                <option>Consulta Presencial</option>
+                <option>Teleconsulta Online</option>
+                <option>Segunda Opinião</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="f-msg" class="form__label">Motivo da consulta <span class="form__optional">(opcional)</span></label>
+              <textarea id="f-msg" name="mensagem" class="form__input form__textarea" rows="4" placeholder="Descreva brevemente o motivo da consulta" aria-describedby="hint-msg"></textarea>
+              <span id="hint-msg" class="form__helper">Informação confidencial — protegida pelo sigilo médico.</span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+              <span class="btn__label">Solicitar Agendamento</span>
+              <svg class="btn__spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-dasharray="60" stroke-dashoffset="15"/></svg>
+            </button>
+
+            <div id="form-success" class="form__success" role="status" aria-live="polite" hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+              Solicitação recebida! Entraremos em contato em até 24 horas.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__name">Dra. Júnia Nascimento</p>
+        <p class="footer__meta">CRM/MG 071495 · RQE 50663 · Hematologista</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Links rápidos">
+        <a href="#sobre">Sobre</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#formacao">Formação</a>
+        <a href="#convenios">Convênios</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer__social" aria-label="Redes sociais">
+        <a href="https://www.instagram.com/junianascimento.hemato/" class="footer__social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Dra. Júnia Nascimento — Todos os direitos reservados.</p>
+      <p class="footer__disclaimer">Este site tem caráter informativo e não substitui consulta médica presencial.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
