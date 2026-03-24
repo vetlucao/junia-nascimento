@@ -1376,3 +1376,81 @@ a.contact-item:hover { border-color: var(--clr-gold); box-shadow: var(--shadow-s
   margin-inline: auto;
 }
 .footer__disclaimer { color: rgba(255,255,255,0.25) !important; }
+
+/* ── LGPD BANNER ────────────────────────────────────────────── */
+.lgpd-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 95;
+  background: var(--clr-navy);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+  padding: var(--sp-5) var(--sp-6);
+}
+.lgpd-banner[hidden] { display: none; }
+.lgpd-banner__content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+}
+.lgpd-banner__content p {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  flex: 1;
+}
+.lgpd-banner__content a {
+  color: var(--clr-gold-light);
+  text-decoration: underline;
+}
+.btn--sm {
+  padding: var(--sp-2) var(--sp-5);
+  font-size: var(--text-sm);
+  min-height: 40px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 639px) {
+  .lgpd-banner__content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--sp-4);
+  }
+  .lgpd-banner { padding: var(--sp-4); }
+}
+
+/* ── PRIVACY PAGE ───────────────────────────────────────────── */
+.privacy-content h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--clr-text);
+  margin-top: var(--sp-8);
+  margin-bottom: var(--sp-3);
+}
+.privacy-content p {
+  font-size: var(--text-base);
+  color: var(--clr-body);
+  line-height: 1.75;
+  margin-bottom: var(--sp-4);
+}
+.privacy-content ul {
+  list-style: disc;
+  padding-left: var(--sp-6);
+  margin-bottom: var(--sp-4);
+}
+.privacy-content li {
+  font-size: var(--text-base);
+  color: var(--clr-body);
+  line-height: 1.75;
+  margin-bottom: var(--sp-2);
+}
+.privacy-content a {
+  color: var(--clr-teal);
+  text-decoration: underline;
+}

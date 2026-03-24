@@ -258,4 +258,20 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ── LGPD BANNER ───────────────────────────────────────────── */
+  const lgpdBanner = document.getElementById('lgpd-banner');
+  const lgpdAccept = document.getElementById('lgpd-accept');
+
+  if (lgpdBanner && lgpdAccept) {
+    const accepted = localStorage.getItem('lgpd-accepted');
+    if (!accepted) {
+      lgpdBanner.hidden = false;
+    }
+
+    lgpdAccept.addEventListener('click', () => {
+      localStorage.setItem('lgpd-accepted', '1');
+      lgpdBanner.hidden = true;
+    });
+  }
+
 })();
