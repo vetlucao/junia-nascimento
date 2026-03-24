@@ -305,6 +305,7 @@ p { max-width: 65ch; }
   inset-inline: 0;
   z-index: 100;
   height: var(--header-h);
+  overflow: visible;
   background: rgba(13, 33, 55, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -416,15 +417,16 @@ p { max-width: 65ch; }
 @media (max-width: 767px) {
   .nav {
     display: block;
-    position: fixed;
-    top: var(--header-h);
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - var(--header-h));
     z-index: 99;
     background: var(--clr-navy);
     padding: var(--sp-8) var(--sp-6);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
@@ -437,9 +439,23 @@ p { max-width: 65ch; }
     pointer-events: auto;
     transform: translateY(0);
   }
-  .nav__list { flex-direction: column; align-items: stretch; gap: var(--sp-2); }
-  .nav__link { font-size: var(--text-md); padding: var(--sp-4); justify-content: flex-start; }
-  .nav__link--cta { justify-content: center; margin-top: var(--sp-4); }
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--sp-4);
+    padding-bottom: var(--sp-8);
+  }
+  .nav__link {
+    font-size: var(--text-lg);
+    padding: var(--sp-4) var(--sp-6);
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav__link--cta {
+    justify-content: center;
+    margin-top: var(--sp-4);
+    border-bottom: none;
+  }
 }
 
 /* ── HERO ────────────────────────────────────────────────────── */
@@ -619,9 +635,14 @@ p { max-width: 65ch; }
 @media (max-width: 767px) {
 
   /* Hero */
+  .hero {
+    min-height: auto;
+    padding-bottom: var(--sp-8);
+  }
   .hero__inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     padding-block: var(--sp-8) var(--sp-6);
     gap: var(--sp-6);
   }
@@ -633,64 +654,137 @@ p { max-width: 65ch; }
     justify-content: center;
   }
   .hero__photo-frame {
-    width: min(260px, 72vw);
-    aspect-ratio: 3/4;
-    border-radius: var(--radius-lg);
+    width: min(200px, 56vw);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+  .hero__photo-img {
+    object-position: center 20%;
   }
   .hero__deco--1, .hero__deco--2 { display: none; }
-  .hero__name { font-size: clamp(2.4rem, 10vw, 3.2rem); }
-  .hero__tagline { font-size: var(--text-base); max-width: 100%; }
-  .hero__actions { flex-direction: column; }
-  .hero__actions .btn { width: 100%; justify-content: center; }
-  .hero__badges { gap: var(--sp-2); }
-  .hero__badge { font-size: var(--text-xs); padding: var(--sp-1) var(--sp-3); }
+  .hero__name { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .hero__eyebrow { font-size: 0.65rem; }
+  .hero__tagline {
+    font-size: var(--text-base);
+    max-width: 100%;
+    margin-inline: auto;
+  }
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 52px;
+    font-size: var(--text-base);
+  }
+  .hero__badges {
+    gap: var(--sp-2);
+    justify-content: center;
+  }
+  .hero__badge {
+    font-size: var(--text-xs);
+    padding: var(--sp-1) var(--sp-3);
+  }
+  .hero__scroll { display: none; }
 
   /* Sections */
-  .section { padding-block: var(--sp-16); }
+  .section {
+    padding-block: var(--sp-12);
+  }
   .section__header { margin-bottom: var(--sp-8); }
+  .section__title { font-size: var(--text-2xl); }
+  .section__subtitle { font-size: var(--text-sm); }
 
   /* Sobre */
-  .sobre__figure { display: none; } /* foto aparece no hero, evita duplicidade no mobile */
-  .sobre__content p { font-size: var(--text-base); }
-  .stats { gap: var(--sp-6); }
-  .stat__number { font-size: var(--text-3xl); }
+  .sobre__figure { display: none; }
+  .sobre__content p { font-size: var(--text-sm); line-height: 1.7; }
+  .stats {
+    gap: var(--sp-6);
+    justify-content: space-between;
+  }
+  .stat__number { font-size: var(--text-2xl); }
+  .stat__label { font-size: var(--text-xs); }
 
   /* Cards */
   .cards { grid-template-columns: 1fr; gap: var(--sp-4); }
-  .card { padding: var(--sp-6); }
+  .card { padding: var(--sp-5); }
+  .card__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: var(--sp-4);
+  }
+  .card__icon svg { width: 22px; height: 22px; }
+  .card__title { font-size: var(--text-lg); margin-bottom: var(--sp-2); }
+  .card__text { font-size: var(--text-sm); line-height: 1.7; }
 
   /* Timeline */
   .timeline { padding-left: var(--sp-6); }
-  .timeline__dot { left: calc(-1 * var(--sp-6) - 5px); }
-  .timeline__title { font-size: var(--text-lg); }
-  .timeline__desc { font-size: var(--text-xs); }
-  .timeline__item { padding-bottom: var(--sp-8); }
+  .timeline__dot {
+    left: calc(-1 * var(--sp-6) - 5px);
+    width: 10px;
+    height: 10px;
+  }
+  .timeline__period { font-size: 0.65rem; }
+  .timeline__title { font-size: var(--text-base); }
+  .timeline__org { font-size: var(--text-xs); }
+  .timeline__desc { font-size: var(--text-xs); line-height: 1.6; }
+  .timeline__item { padding-bottom: var(--sp-6); }
 
   /* Convênios */
-  .convenios__grid { grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
-  .convenio { padding: var(--sp-3) var(--sp-4); font-size: var(--text-xs); }
+  .convenios__grid { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .convenio {
+    padding: var(--sp-4);
+    font-size: var(--text-sm);
+    min-height: 52px;
+  }
 
   /* Contato */
-  .contato__desc { font-size: var(--text-base); }
+  .contato__desc { font-size: var(--text-sm); }
   .contact-item { padding: var(--sp-3) var(--sp-4); }
+  .contact-item__value { font-size: var(--text-xs); word-break: break-word; }
   .horario { padding: var(--sp-4); }
+  .horario__title { font-size: var(--text-base); }
+  .horario__row { font-size: var(--text-xs); }
 
   /* Form */
-  .form { padding: var(--sp-6); border-radius: var(--radius-lg); }
-  .form__title { font-size: var(--text-xl); margin-bottom: var(--sp-6); }
+  .form {
+    padding: var(--sp-5);
+    border-radius: var(--radius-lg);
+    margin-inline: calc(-1 * var(--sp-2));
+  }
+  .form__title { font-size: var(--text-lg); margin-bottom: var(--sp-5); }
+  .form__input { min-height: 48px; font-size: var(--text-base); }
+  .form__textarea { min-height: 100px; }
+  .btn--full { min-height: 52px; font-size: var(--text-base); }
 
   /* Footer */
-  .footer__inner { flex-direction: column; gap: var(--sp-6); padding-block: var(--sp-8); }
-  .footer__nav { gap: var(--sp-2) var(--sp-4); }
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--sp-6);
+    padding-block: var(--sp-8);
+  }
+  .footer__nav {
+    gap: var(--sp-2) var(--sp-4);
+    justify-content: center;
+  }
+  .footer__social { justify-content: center; }
+  .footer__bottom { padding-block: var(--sp-4); }
+  .footer__bottom p { font-size: var(--text-xs); }
 }
 
 /* ── SMALL PHONES (< 400px) ──────────────────────────────── */
 @media (max-width: 399px) {
-  .hero__photo-frame { width: min(220px, 80vw); }
-  .convenios__grid { grid-template-columns: 1fr; }
-  .hero__badges { flex-direction: column; align-items: flex-start; }
+  .hero__photo-frame { width: min(160px, 50vw); }
+  .hero__name { font-size: clamp(1.8rem, 8vw, 2.2rem); }
+  .hero__badges { flex-direction: column; align-items: center; }
   .stats { flex-direction: column; gap: var(--sp-4); }
   .header__logo-crm { display: none; }
+  .header__logo-name { font-size: var(--text-base); }
+  .contact-item__icon { width: 36px; height: 36px; }
 }
 
 /* ── SOBRE ───────────────────────────────────────────────────── */
@@ -759,7 +853,7 @@ p { max-width: 65ch; }
   padding-top: var(--sp-8);
   border-top: 1px solid var(--clr-divider);
 }
-.stat { display: flex; flex-direction: column; }
+.stat { display: flex; flex-direction: row; flex-wrap: wrap; align-items: baseline; }
 .stat__number {
   font-family: var(--font-display);
   font-size: var(--text-4xl);
@@ -775,6 +869,7 @@ p { max-width: 65ch; }
   font-weight: 700;
 }
 .stat__label {
+  width: 100%;
   font-size: var(--text-sm);
   color: var(--clr-muted);
   margin-top: var(--sp-1);
