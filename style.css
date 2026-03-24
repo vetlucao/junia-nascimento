@@ -1325,6 +1325,21 @@ a.contact-item:hover { border-color: var(--clr-gold); box-shadow: var(--shadow-s
   letter-spacing: 0.04em;
 }
 
+.crm-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.45);
+  transition: color var(--dur-fast);
+}
+.crm-verify:hover {
+  color: var(--clr-gold-light);
+}
+.crm-verify svg {
+  color: var(--clr-teal);
+  flex-shrink: 0;
+}
+
 .footer__nav {
   display: flex;
   flex-wrap: wrap;
