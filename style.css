@@ -1415,13 +1415,25 @@ a.contact-item:hover { border-color: var(--clr-gold); box-shadow: var(--shadow-s
   flex-shrink: 0;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 767px) {
+  .lgpd-banner {
+    padding: var(--sp-3) var(--sp-4);
+    bottom: 0;
+  }
   .lgpd-banner__content {
     flex-direction: column;
     text-align: center;
-    gap: var(--sp-4);
+    gap: var(--sp-3);
   }
-  .lgpd-banner { padding: var(--sp-4); }
+  .lgpd-banner__content p {
+    font-size: var(--text-xs);
+    line-height: 1.5;
+  }
+  .btn--sm {
+    padding: var(--sp-2) var(--sp-4);
+    font-size: var(--text-xs);
+    min-height: 36px;
+  }
 }
 
 /* ── PRIVACY PAGE ───────────────────────────────────────────── */
