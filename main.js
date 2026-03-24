@@ -261,16 +261,31 @@
   /* ── LGPD BANNER ───────────────────────────────────────────── */
   const lgpdBanner = document.getElementById('lgpd-banner');
   const lgpdAccept = document.getElementById('lgpd-accept');
+  const waFloat = document.querySelector('.whatsapp-float');
+
+  function updateWaPosition() {
+    if (!waFloat || !lgpdBanner) return;
+    if (!lgpdBanner.hidden) {
+      const bannerH = lgpdBanner.offsetHeight;
+      waFloat.style.bottom = (bannerH + 16) + 'px';
+      waFloat.classList.add('lgpd-visible');
+    } else {
+      waFloat.style.bottom = '';
+      waFloat.classList.remove('lgpd-visible');
+    }
+  }
 
   if (lgpdBanner && lgpdAccept) {
     const accepted = localStorage.getItem('lgpd-accepted');
     if (!accepted) {
       lgpdBanner.hidden = false;
+      requestAnimationFrame(updateWaPosition);
     }
 
     lgpdAccept.addEventListener('click', () => {
       localStorage.setItem('lgpd-accepted', '1');
       lgpdBanner.hidden = true;
+      updateWaPosition();
     });
   }
 

@@ -1279,7 +1279,8 @@ a.contact-item:hover { border-color: var(--clr-gold); box-shadow: var(--shadow-s
   box-shadow: 0 4px 12px rgba(37,211,102,0.4);
   transition:
     transform var(--dur-base) var(--ease-out),
-    box-shadow var(--dur-base) var(--ease-out);
+    box-shadow var(--dur-base) var(--ease-out),
+    bottom var(--dur-base) var(--ease-out);
 }
 .whatsapp-float:hover {
   transform: scale(1.1);
@@ -1388,6 +1389,8 @@ a.contact-item:hover { border-color: var(--clr-gold); box-shadow: var(--shadow-s
   border-top: 1px solid rgba(255,255,255,0.1);
   box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
   padding: var(--sp-5) var(--sp-6);
+  max-height: 50vh;
+  overflow-y: auto;
 }
 .lgpd-banner[hidden] { display: none; }
 .lgpd-banner__content {
@@ -1417,9 +1420,8 @@ a.contact-item:hover { border-color: var(--clr-gold); box-shadow: var(--shadow-s
 
 @media (max-width: 767px) {
   .lgpd-banner {
-    padding: var(--sp-3) var(--sp-4);
-    padding-bottom: calc(var(--sp-4) + env(safe-area-inset-bottom, 8px));
-    bottom: 0;
+    padding: var(--sp-4);
+    padding-bottom: calc(var(--sp-5) + env(safe-area-inset-bottom, 12px));
   }
   .lgpd-banner__content {
     flex-direction: column;
@@ -1434,6 +1436,9 @@ a.contact-item:hover { border-color: var(--clr-gold); box-shadow: var(--shadow-s
     padding: var(--sp-2) var(--sp-4);
     font-size: var(--text-xs);
     min-height: 36px;
+  }
+  .whatsapp-float.lgpd-visible {
+    bottom: calc(var(--sp-4) + var(--lgpd-h, 0px));
   }
 }
 
