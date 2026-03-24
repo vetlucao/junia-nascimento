@@ -223,35 +223,35 @@
       return;
     }
 
-    // Show loading state — rule §2 loading-buttons
-    submitBtn.classList.add('is-loading');
-    submitBtn.disabled = true;
+    // Build WhatsApp message from form data
+    const nome = form.querySelector('#f-nome').value.trim();
+    const tel = form.querySelector('#f-tel').value.trim();
+    const email = form.querySelector('#f-email').value.trim();
+    const tipo = form.querySelector('#f-tipo').value;
+    const msg = form.querySelector('#f-msg').value.trim();
 
-    try {
-      // Simulate async submission (replace with real endpoint)
-      await new Promise(resolve => setTimeout(resolve, 1600));
+    let texto = `Olá, gostaria de agendar uma consulta com a Dra. Júnia Nascimento.\n\n`;
+    texto += `*Nome:* ${nome}\n`;
+    texto += `*Telefone:* ${tel}\n`;
+    if (email) texto += `*E-mail:* ${email}\n`;
+    if (tipo) texto += `*Tipo de consulta:* ${tipo}\n`;
+    if (msg) texto += `*Motivo:* ${msg}\n`;
 
-      // Success — rule §8 success-feedback
-      form.reset();
-      form.querySelectorAll('.form__input').forEach(f => f.classList.remove('is-error'));
-      successMsg.hidden = false;
-      successMsg.focus();
+    const waURL = `https://wa.me/5531986488180?text=${encodeURIComponent(texto)}`;
 
-      // Hide success after 6s
-      setTimeout(() => { successMsg.hidden = true; }, 6000);
+    // Success feedback before redirecting
+    form.reset();
+    form.querySelectorAll('.form__input').forEach(f => f.classList.remove('is-error'));
+    successMsg.hidden = false;
+    successMsg.focus();
 
-    } catch {
-      // Timeout/error feedback — rule §8 timeout-feedback
-      const firstField = form.querySelector('.form__input');
-      if (firstField) {
-        const errId = firstField.getAttribute('aria-describedby');
-        const errEl = errId ? document.getElementById(errId) : null;
-        if (errEl) errEl.textContent = 'Erro ao enviar. Por favor, tente novamente ou ligue para nós.';
-      }
-    } finally {
-      submitBtn.classList.remove('is-loading');
-      submitBtn.disabled = false;
-    }
+    // Open WhatsApp after brief delay for user feedback
+    setTimeout(() => {
+      window.open(waURL, '_blank', 'noopener,noreferrer');
+    }, 800);
+
+    // Hide success after 6s
+    setTimeout(() => { successMsg.hidden = true; }, 6000);
   });
 
   /* ── FOOTER YEAR ─────────────────────────────────────────── */
