@@ -1418,6 +1418,7 @@ a.contact-item:hover { border-color: var(--clr-gold); box-shadow: var(--shadow-s
 @media (max-width: 767px) {
   .lgpd-banner {
     padding: var(--sp-3) var(--sp-4);
+    padding-bottom: calc(var(--sp-4) + env(safe-area-inset-bottom, 8px));
     bottom: 0;
   }
   .lgpd-banner__content {
